@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Spider-font;
+    src: url("HOMOARAK.TTF");
+}
+body{
+    font-family:Spider-font;
+    background: linear-gradient(to right,#8d0108, #003afa);
+    height: 100vh;
+}
+h1{
+    color:aliceblue;
+}
+a{
+    color:darkorange;
+    margin-bottom: 20px;
+
+}
+
+.login-wapper{
+    display :grid;
+    place-content: center;
+    height: 100%;
+    text-align: center;
+}
+.login-wapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 300px;
+}
+input{
+    margin-bottom: 20px;
+    background: linear-gradient(to right,#8d0108, #003afa);
+    padding: 10px;
+    border-radius: 10px ;
+}
+.login-wapper form button{
+    font-family: Spider-font;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: rgb(158, 158, 158);
+}
+.login-wapper form button:hover{
+    cursor:pointer;
+    filter: opacity(0.5);
+}
+.error{
+    font-weight: 700;
+    color: rgb(255, 217, 0);
+    padding: 4px;
+    font-size: 20px;
+}
+.hidden{
+    visibility: hidden;
+}
+
