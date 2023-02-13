@@ -45,7 +45,7 @@ input{
     cursor:pointer;
     filter: opacity(0.5);
 }
-.error{
+.error_login{
     font-weight: 700;
     color: rgb(255, 217, 0);
     padding: 4px;

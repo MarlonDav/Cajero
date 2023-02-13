@@ -2,26 +2,11 @@
 const usuarioBD = [
     {
         nombre: " Marlon Bernal",
-        email: "marlon.bernal.riveros@gamil.com",
+        email: "marlon.bernal.riveros@gmail.com",
         cuenta:1,
         password:"1234",
         saldo:1000,
         log: []
-    },
-    {
-        nombre: "Maria Fernanda Garzon Carvajal",
-        email: "mafe.garzon@gmail.com",
-        cuenta: 2,
-        password:1234,
-        saldo:2000,
-        log:[
-            {
-                fecha:new Date(),
-                monto: 100,
-                type: "deposito"
-
-            }
-        ]
     }
 ]
 
@@ -36,7 +21,7 @@ input.addEventListener('focus',function(){
     }
 })
 
-form.addEventListener('sumbit', function(e){
+form.addEventListener('submit', function(e){
     e.preventDefault();
     const data = new FormData(form)
     const { loginEmail, loginPassword} = Object.fromEntries(data)
@@ -63,11 +48,7 @@ form.addEventListener('sumbit', function(e){
         error.classList.remove('hidden')
         error.classList.remove('alert-info')
         error.innerHTML = 'Error en los datos del login'
-        window.sessionStorage.setItem('user',JSON.stringify({... restOfElements, email}))
-        window.location.href ='/atm.html'
+        window.sessionStorage.setItem('currentUser', JSON.stringify(loginAttempt))
+        window.location.href ='./atm.html'
     }
-
-
-    
-
 })

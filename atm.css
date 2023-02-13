@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Spider-font;
+    src: url("HOMOARAK.TTF");
+}
+body{
+
+    font-family: Spider-font;
+    background: linear-gradient(to right,#8d0108, #003afa);
+}
+
+img{
+    width: 80px;
+}
+
+#saludo_usuario{
+    color: aliceblue;
+}   
+small{
+    color: aliceblue;
+}
+#modal{
+    position:fixed;
+    min-width: 500px;
+    min-height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:linear-gradient(to right,#2006b8, #b60202);
+    padding: 1rem;
+    border-radius: 1rem;
+    z-index: 100;
+    color: black;
+    text-align: center;
+}
+#modal div{
+    display: flex;
+    flex-direction: column;
+}
+#modal h5 {
+    margin-bottom: 30px;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+}
