@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cajero</title>
     <link rel="stylesheet" href="atm.css">
-    <script type="module" src="atm.js"></script>
+    
 </head>
 <body>
     <div>
          <img id="spider-icon" src ="imagenes/spider-man-comic-new-logo-322E9DE914-seeklogo.com.png">
-    <header>
+     <header>
          <h1 id="saludo_usuario"></h1>
          <small>Por favor selocciona una opcion</small>
-    </header>
-    <main class="parrilla">
+     </header>
+     <main class="parrilla">
         <div class="opciones_master">
             <button id ="retiros" class="button-master border-radius_top">
                 <img id="spider-bill" src="imagenes/png-clipart-united-states-dollar-dollar-sign-computer-icons-finance-dollar-text-rectangle.png">
@@ -26,28 +26,29 @@
             <p> Depositos</p>
            </button>
         </div>
+       
         <div class="opciones-secundarias">
             <button id="saldo" class="button-secondary">Consultar saldo</button>
             <button id="movientos" class="button-secondary">Movimientos</button>
             <button class="button-secondary border-radius_right">Pin Change</button>
             <button id="salir" class="button-secondary">Salir</button>
             <button class="button-secondary">Imprimir recibo</button>
-            <button class="button-secondary border-radius_left">Transferencias</button>
+            <button class="button-secondary border-radius_left">Transfer</button>
+           
         </div>
+        </div>
+ 
+     </main>
         <div id="modal" class="hidden">
             <span>x</span>
             <h5>saldo</h5>
             <div>
-                $hhh
-            </div>
+            </div>   
+           
         </div>
         <div id="backdrop" class="hidden"></div>
 
-
-    </main>
+    <script type="module" src="atm.js"></script>
    
-    </div>
-   
-    
 </body>
 </html>
