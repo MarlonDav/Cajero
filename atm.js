@@ -6,7 +6,7 @@ const closeBackdrop = document.querySelector('#backdrop')
 
 const abrirModal = () => {
     modal.classList.remove('hidden')
-    backdrop.classList.remove('hidden')
+   
 }
 const cerrarModal = () => {
     modal.classList.add('hidden')
@@ -41,6 +41,16 @@ consultaSaldo.addEventListener('click', function(){
 
 
 })
+document.querySelector('#movimientos').addEventListener('click', () =>{
+    abrirModal()
+    const currentUser = JSON.parse(window.sessionStorage.getItem('currentUser'))
+    const tituloModal = document.querySelector("#modal h5")
+    const bodyModal = document.querySelector("#modal div")
+    bodyModal.innerHTML = 
+    tituloModal.innerHTML =  'Movimientos'
+   
+
+} )
 const botonDepositos = document.querySelector("#depositos")
 botonDepositos.addEventListener('click',function(){
     abrirModal()
@@ -66,6 +76,39 @@ sumbitDeposito.addEventListener('click',function(){
     const updateCurrentUser = {
         ... currentUser,
         saldo: saldoActual + Number(nuevoDeposito.value),
+    }
+    window.sessionStorage.setItem('currentUser', JSON.stringify(updateCurrentUser))
+    
+    cerrarModal()
+
+})
+
+})
+const botonRetiros = document.querySelector("#retiros")
+botonRetiros.addEventListener('click',function(){
+    abrirModal()
+    
+    const tituloModal = document.querySelector("#modal h5")
+    const bodyModal = document.querySelector("#modal div")
+    bodyModal.innerHTML = `
+   
+    <input id="nuevoDeposito" placeholder="monto" type="number" />
+    <button id="sumbitDeposito" type="sumbit" class="button-master"> Confirmar </button>
+    `
+    
+    tituloModal.innerHTML =  'Retiro de cuenta'
+
+const currentUser = JSON.parse(window.sessionStorage.getItem('currentUser'))
+const {saldo} = JSON.parse(window.sessionStorage.getItem('currentUser')) 
+const saldoActual = Number(saldo)
+
+const nuevoDeposito = document.querySelector('#nuevoDeposito')
+const sumbitDeposito = document.querySelector('#sumbitDeposito')
+
+sumbitDeposito.addEventListener('click',function(){
+    const updateCurrentUser = {
+        ... currentUser,
+        saldo: saldoActual - Number(nuevoDeposito.value),
     }
     window.sessionStorage.setItem('currentUser', JSON.stringify(updateCurrentUser))
     

@@ -1,11 +1,19 @@
 
 const usuarioBD = [
     {
-        nombre: " Marlon Bernal",
+       nombre: " Marlon Bernal",
         email: "marlon.bernal.riveros@gmail.com",
-        cuenta:1,
+        cuenta:1 ,
         password:"1234",
         saldo:1000,
+        log: []
+    },
+    {
+        nombre: " Maria Fernanda Garzon Carvajal",
+        email: "maria.garzon.carvajal@gmail.com",
+        cuenta: 2 ,
+        password:"1234",
+        saldo:2000,
         log: []
     }
 ]
